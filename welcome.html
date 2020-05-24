@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Login Form</title>
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        function sendMail() {
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "anil.truebuildproducts@gmail.com",
+            Password : "88C641F166C615D8A5B9F25ADB4E523B2F8B",
+            To : ['bashiresh@gmail.com','anilkumar.suravarapu92756@gmail.com'],
+            From : "anil.truebuildproducts@gmail.com",
+            Subject : "Test email",
+            Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+        }).then(
+        message => alert(message)
+                );
+        }
+    </script>
+     <script>
+        function redirect(){ 
+            window.location="videochatcheck.html";
+          }
+    </script>
+        </head>
+    <body>
+        <div class="form-container">
+        <ul class="list">
+            <li><h2>University Portal</h2></li>
+            <li><input type="button" name="email" onclick="sendMail()" value="Send email"></li>
+            <li><input type="button" name="class" value="Join Class" onclick="redirect()"></li>
+        </ul>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Html Login Form</title>
+        <link rel="stylesheet" type="text/css" href="global.css">
+        <script>
+            function redirect(){
+                if(document.getElementById("UserName").value=="null" || document.getElementById("UserName").value=="" ||
+                 document.getElementById("Passcode").value=="null" || document.getElementById("Passcode").value=="" ){
+                    alert("Please enter the Correct UserName and Password");
+                 }
+                else if(document.getElementById("UserName").value==document.getElementById("Passcode").value){
+                    window.location="welcome.html";
+                }
+                else{
+                    alert("Please enter the Correct UserName and Password");
+                }
+               
+            }
+        </script>
+    </head>
+    <body style="background-image: url('https://tech.eu/wp-content/uploads/2014/04/ZenMate-1024x400.jpg')">
+        
+        <div class="form-container">
+        <ul class="list">
+            <li><h2>Student Login</h2></li>
+            <li><input type="text"  placeholder="User Name" id="UserName"></li>
+            <li><input type="password"  placeholder="password" id="Passcode"></li>
+            <li><input type="button" name="Submit" value="submit" onclick="redirect()"></li>
+        </ul>
+    </div>
+
+    </body>
+</html>
